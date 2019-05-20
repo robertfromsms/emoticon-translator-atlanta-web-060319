@@ -1,7 +1,10 @@
 # require modules here
 
-def load_library
-  # code goes here
+def load_library(path)
+  require "yaml"
+
+  translator = YAML.load(File.read("#{path}"))
+  return translator
 end
 
 def get_japanese_emoticon
